@@ -1,0 +1,70 @@
+    <div class="jumbotron text-center">
+      <div class="form-group row">
+        <div class="col-md-12" style="text-align:center">
+        	<h2>Upload a Mobile App</h2>
+        </div>
+      </div>
+      <form id="sample-create-form">
+        <div class="form-group row">
+            <div class="col-md-5" style="text-align:right">
+              <label for="sample-create-title" class="col-form-label" style="color:#5a6872;font-size: 14px" >Title:</label>
+            </div>
+            <div class="col-md-5" style="text-align:left">
+                <input class="form-control" style="font-size: 16px; color: whitesmoke;border-bottom: 0px solid rgba(0,0,0,0.26);border: 1px solid #ccc;border-radius: 4px; box-sizing: border-box;background-color: #264A60;padding: 4px 20px;margin: 8px 0;" type="text" value="" name="title" id="sample-create-title">
+                </input>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-5" style="text-align:right">
+              <label for="sample-create-package" class="col-form-label" style="color:#5a6872;font-size: 14px" >Package Name:</label>
+            </div>
+            <div class="col-md-4" style="text-align:left">
+                <input class="form-control" style="font-size: 16px; color: whitesmoke;border-bottom: 0px solid rgba(0,0,0,0.26);border: 1px solid #ccc;border-radius: 4px; box-sizing: border-box;background-color: #264A60;padding: 4px 20px;margin: 8px 0;display: inline-block;" type="text" value="" name="packagename" id="sample-create-package">
+                </input>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-5" style="text-align:right">
+              <label for="sample-create-version" class="col-form-label" style="color:#5a6872;font-size: 14px" >Version:</label>
+            </div>
+            <div class="col-md-2" style="text-align:left">
+                <input class="form-control" style="font-size: 16px; color: whitesmoke;border-bottom: 0px solid rgba(0,0,0,0.26);border: 1px solid #ccc;border-radius: 4px; box-sizing: border-box;background-color: #264A60;padding: 4px 20px;margin: 8px 0;display: inline-block;" type="text" value="" name="version" id="sample-create-version">
+                </input>
+            </div>
+        </div>
+      </form>
+      <div class="form-group row">
+        <div class="col-md-5" style="text-align:right">
+          <label for="sample-create-image" class="col-form-label" style="color:#5a6872;font-size: 14px" >Image:</label>
+        </div>
+        <div class="col-md-3" style="text-align:left">
+            <div>
+                <form class="form-control" id="fileImageForm" enctype="multipart/form-data" style="font-size: 16px; color: whitesmoke;border-bottom: 0px solid rgba(0,0,0,0.26);border: 1px solid #ccc;border-radius: 4px; box-sizing: border-box;background-color: #264A60;padding: 4px 20px;margin: 8px 0;display: inline-block;">
+                    <input id="sample-create-image" name="image" type="file" />
+                </form>
+            </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-5" style="text-align:right">
+          <label for="sample-create-file" class="col-form-label" style="color:#5a6872;font-size: 14px" >File:</label>
+        </div>
+        <div class="col-md-3" style="text-align:left">
+            <div>
+                <form class="form-control" id="fileForm" enctype="multipart/form-data" style="font-size: 16px; color: whitesmoke;border-bottom: 0px solid rgba(0,0,0,0.26);border: 1px solid #ccc;border-radius: 4px; box-sizing: border-box;background-color: #264A60;padding: 4px 20px;margin: 8px 0;display: inline-block;">
+                    <input id="sample-create-file" name="file" type="file" />
+                </form>
+            </div>
+        </div>
+      </div>
+      <div class="form-group row" >
+        <div class="col-md-12" style="text-align:center">
+            <button ng-click="appUpload();" style="background-color:#4178be;height: 100%;max-width: 70%;font-weight: 500;padding-right: 3%;padding-left: 3%;font-size: 0.8em;font-weight: 300;align: right" class="btn btn-primary" data-toggle="modal">Upload</button>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-12" style="text-align:center">
+            <p id="sample-message"></p>
+        </div>
+      </div>
+    </div>

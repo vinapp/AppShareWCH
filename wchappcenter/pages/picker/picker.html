@@ -1,0 +1,12 @@
+    <div ng-controller="pickerController">
+        <select ng-model="selectedSearchCriteria" style="margin:10px" style="background-color:#4178be;height: 100%;max-width: 70%;font-weight: 500;padding-right: 3%;padding-left: 3%;font-size: 0.9em;font-weight: 300;align: right">
+          <option ng-repeat="x in searches" value="{{x.value}}">{{x.name}}</option>
+        </select>
+        <button ng-click="launch()" style="background-color:#4178be;height: 100%;max-width: 70%;font-weight: 500;padding-right: 3%;padding-left: 3%;font-size: 0.8em;font-weight: 300;align: right" class="btn btn-primary">Browse Mobile Apps</button>
+        </br>
+        </br>
+    </div>
+    <div id="pickerDialog" >
+        <iframe tabindex="0" id="pickerIframe"></iframe>
+    </div>
+    <div id="result"></div>

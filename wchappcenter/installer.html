@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Application Catalog</title>
+    <style>
+      table {
+          border-collapse: collapse;
+          width: 100%;
+      }
+      th, td {
+          padding: 8px;
+      }
+      tr:nth-child(odd){background-color: #f2f2f2}
+</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/installer.js"></script>
+</head>
+<body>
+  <div ng-app="installer" ng-controller="installerController">
+    <div class="form-group row">
+      <div class="col-md-12" style="text-align:center">
+        <h1>Application Catalog</h1>
+      </div>
+    </div>
+    <table>
+      <tr ng-repeat="x in apps" ng-if="isIos === false" ng-class-even="'md-col-6'" ng-class-odd="'row'">
+        <td ng-click='goToLink("https://my11.digitalexperience.ibm.com" + x.document.elements.mobileApplication.url)' align="center">
+          <a href="https://my11.digitalexperience.ibm.com{{ x.document.elements.mobileApplication.url }}">
+            <image width="60%" src="https://my11.digitalexperience.ibm.com{{ x.document.elements.image.url }}">
+            </image>
+          </a>
+        </td>
+        <td ng-click='goToLink("https://my11.digitalexperience.ibm.com" + x.document.elements.mobileApplication.url)' align="left">
+          <h2>{{x.document.elements.title.value }}</h2>
+          <h2>Version: {{x.document.elements.version.value}}</h2>
+        </td>
+      </tr>
+      <tr ng-repeat="x in apps" ng-if="isIos === true">
+        <td ng-click='goToLink("itms-services://?action=download-manifest&url=https://my11.digitalexperience.ibm.com" + x.document.elements.manifestFileIos.url)' align="left">
+          <a href="itms-services://?action=download-manifest&url=https://my11.digitalexperience.ibm.com{{ x.document.elements.manifestFileIos.url}}">
+            <image width="60%" src="https://my11.digitalexperience.ibm.com{{ x.document.elements.image.url }}">
+            </image>
+        </td>
+        <td ng-click='goToLink("itms-services://?action=download-manifest&url=https://my11.digitalexperience.ibm.com" + x.document.elements.manifestFileIos.url)' align="left">
+          <h2>{{x.document.elements.title.value }}</h2>
+          <h2>Version: {{x.document.elements.version.value}}</h2>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

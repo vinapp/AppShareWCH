@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- define angular app -->
+<html ng-app="appCenterApp">
+
+<head>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="pages/picker/pickerConsumer.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+  <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+
+  <script src="controllerscript.js"></script>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+
+  <nav class="navbar navbar-default" style="background-color:#152935">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/" style="color:#7cc7ff">Application Center</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" style="color:white"><i class="fa fa-home" style="color:white"></i> Home</a></li>
+        <li><a href="#upload" style="color:white"><i class="fa fa-upload" style="color:white"></i> Upload</a></li>
+        <!--<li><a href="#view" style="color:white"><i class="fa fa-list" style="color:white"></i> View Apps</a></li>-->
+        <li><a href="#assetpicker" style="color:white"><i class="fa fa-list" style="color:white"></i> View Apps</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="main">
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
+  </div>
+
+  <footer class="text-center" style="background-color:#152935">
+    <p style="color:white">Information on <a href="https://console.ng.bluemix.net/services">Bluemix Services</a></p>
+    <p style="color:white">More Information on <a href="http://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/appcenter/">IBM Application Center</a></p>
+  </footer>
+
+</body>
+
+</html>
